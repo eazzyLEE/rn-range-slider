@@ -230,8 +230,8 @@ const Slider: React.FC<SliderProps> = ({
 
           const handlePositionChange = (positionInView: number) => {
             const {low, high, min, max, step} = inPropsRef.current;
-            const minValue = isLow ? min : low + minRange;
-            const maxValue = isLow ? high - minRange : max;
+            const minValue = minRange;
+            const maxValue = isLow ? high : max;
             const value = clamp(
               getValueForPosition(
                 positionInView,
